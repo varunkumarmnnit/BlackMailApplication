@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/goalLayoutVertical"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:orientation="vertical"
+        android:baselineAligned="false" >
+		
+        <ScrollView
+	        android:id="@+id/scrollView1"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent" >
+	        
+	        <LinearLayout
+	            android:layout_height="wrap_content"
+	            android:layout_width="match_parent"
+	            android:orientation="vertical" >
+	         
+		        <TextView 
+		             android:id="@+id/goalNameLabel"
+		             android:layout_gravity="center"
+					 android:text="@string/goalNameLabel"
+					 android:layout_width="wrap_content"
+					 android:layout_height="wrap_content" />
+		        
+				<EditText
+				        android:id="@+id/goal_name_box"
+					    android:layout_marginTop="10dp"
+					    android:layout_gravity="center_horizontal"
+					    android:layout_width="wrap_content"
+					    android:layout_height="0dp"
+					    android:hint="@string/goal_name"
+					    android:layout_weight="10"
+					    android:inputType="textCapWords"/>
+	
+				<TextView 
+			         android:id="@+id/startTimeLabel"
+			         android:layout_gravity="center_horizontal"
+			         android:gravity="center"
+					 android:text="@string/startTimeLabel"
+					 android:layout_width="wrap_content"
+					 android:layout_height="wrap_content" />
+	
+				<TimePicker
+				    android:id="@+id/startTimePick"
+				    android:layout_gravity="center_horizontal"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content" />
+				
+				<TextView
+			        android:id="@+id/startDateLabel"
+			        android:layout_gravity="center_horizontal"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:gravity="fill_vertical|center"
+			        android:text="@string/startDateLabel" />
+			    
+			    <DatePicker
+			        android:id="@+id/startDatePick"
+			        android:layout_gravity="center_horizontal"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content" />
+				
+			    <TextView 
+			         android:id="@+id/endDateLabel"
+			         android:gravity="center"
+			         android:layout_gravity="center_horizontal"
+					 android:text="@string/endDateLabel"
+					 android:layout_width="wrap_content"
+					 android:layout_height="wrap_content" />
+			    
+				<DatePicker
+			        android:id="@+id/endDatePick"
+			        android:layout_gravity="center_horizontal"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content" />
+				
+				<TextView
+				    android:id="@+id/occurrenceTitle"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_gravity="center_horizontal"
+				    android:gravity="center_horizontal"
+				    android:text="@string/occurrenceTitle" />
+				
+				<NumberPicker
+				    android:id="@+id/occurrencePicker"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_gravity="center_horizontal" />
+				
+				<RelativeLayout 
+				    android:layout_gravity="bottom"
+				    android:layout_width="match_parent"
+				    android:layout_height="match_parent" >
+		
+					<Button
+					    android:id="@+id/continueToMapButton"
+					    android:layout_width="match_parent"
+					    android:layout_height="wrap_content"
+					    android:layout_alignParentBottom="true"
+					    android:layout_alignParentLeft="true"
+					    android:onClick="continueButtonClicked"
+					    android:text="@string/continue_planning" />
+		
+				</RelativeLayout>
+			</LinearLayout>
+		
+	</ScrollView>
+		
+	</LinearLayout>

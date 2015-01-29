@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/goalLayoutVertical"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@color/titlebg"
+        android:gravity="center" >
+            
+        <ImageView
+            android:id="@+id/main_logo"
+            android:layout_width="match_parent"
+            android:layout_height="266dp"
+            android:src="@drawable/blackmaillogo" />
+      <LinearLayout
+          	android:layout_height="match_parent"
+        	android:layout_width="match_parent"
+        	android:padding="25dp"
+        	android:orientation="vertical"
+        	android:background="@color/titlebg"
+        	android:gravity="center" >
+        <Button 
+		    android:id="@+id/demoButton"
+		    android:layout_width="match_parent" 
+		    android:layout_height="wrap_content"
+		    android:text="@string/demo"
+		    android:layout_weight="10" />
+		<Button 
+		    android:id="@+id/showGoalsButton"
+		    android:layout_width="match_parent" 
+		    android:layout_height="wrap_content"
+		    android:text="@string/show_goals" 
+		    android:onClick="showGoals"
+		    android:layout_weight="10" />
+		<Button
+		    android:id="@+id/createGoalButton" 
+		    android:layout_width="match_parent" 
+		    android:layout_height="wrap_content"
+		    android:text="@string/create_goal" 
+		    android:onClick="createGoal"
+		    android:layout_weight="10" />
+		<Button
+		    android:id="@+id/accountSetupButton"  
+		    android:layout_width="match_parent" 
+		    android:layout_height="wrap_content"
+		    android:text="@string/account_setup" 
+		    android:onClick="setUpAccounts"
+		    android:layout_weight="10" />
+		<Button 
+		    android:id="@+id/aboutButton"
+		    android:layout_width="match_parent" 
+		    android:layout_height="wrap_content"
+		    android:text="@string/about" 
+		    android:onClick="showAbout"
+		    android:layout_weight="10" />
+		</LinearLayout>
+</LinearLayout>

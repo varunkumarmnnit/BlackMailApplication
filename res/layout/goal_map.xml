@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_weight="20"
+        android:layout_height="0dp"/>
+    
+    <RadioGroup 
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal">
+		    
+		    <RadioButton android:id="@+id/be_here_radio"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/be_here"
+		        android:onClick="onRadioButtonClicked"/>
+		    
+		    <RadioButton android:id="@+id/dont_be_here_radio"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/dont_be_here"
+		        android:onClick="onRadioButtonClicked"/>
+	</RadioGroup>
+    
+    <LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:minHeight="10dp"
+		    android:orientation="horizontal"
+		    android:layout_weight="1" >
+        
+		<Button
+		    android:id="@+id/deleteMarkerButton" 
+		    android:layout_height="match_parent"
+		    android:layout_width="match_parent"
+		    android:layout_weight="1"
+		    android:text="@string/delete_goal_marker"
+		    android:onClick="deleteGoalMarker" />
+		<Button
+		    android:id="@+id/continuePlanningButton"
+		    android:layout_weight="1"
+		    android:layout_height="match_parent"
+		    android:layout_width="match_parent"
+		    android:text="@string/continue_planning" 
+		    android:onClick="continuePlanning" />
+	</LinearLayout>   
+        
+    
+</LinearLayout>

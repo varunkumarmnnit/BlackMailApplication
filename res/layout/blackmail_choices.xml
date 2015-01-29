@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <TextView 
+	         android:id="@+id/platformLabel"
+			 android:text="@string/platformLabel"
+			 android:layout_width="fill_parent"
+			 android:layout_height="wrap_content" />
+
+     <RadioGroup
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:gravity="center_horizontal"
+         android:orientation="horizontal" >
+
+         <RadioButton
+             android:id="@+id/facebook_radio"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:onClick="platformRadioClicked"
+             android:text="@string/facebook" />
+
+	    <RadioButton
+	        android:id="@+id/twitter_radio"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:onClick="platformRadioClicked"
+	        android:text="@string/twitter" />
+
+	</RadioGroup>
+	
+     <TextView
+         android:id="@+id/BMchoiceLabel"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:paddingTop="20dp"
+         android:text="@string/BMchoice" />
+     
+     <RadioGroup 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:gravity="center_horizontal"
+	    android:orientation="horizontal">
+	    
+	    <RadioButton android:id="@+id/textBM_radio"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/textBM"
+	        android:onClick="onBMTypeClicked"/>
+	    
+	    <RadioButton android:id="@+id/pictureBM_radio"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/pictureBM"
+	        android:onClick="onBMTypeClicked"/>
+	</RadioGroup>
+	
+    <TextView
+        android:id="@+id/backout_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:text="@string/backoutLabel" />
+    
+     <NumberPicker
+        android:id="@+id/backoutPicker"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal" >
+		  
+		    <EditText
+		        android:id="@+id/messageBox"
+		        android:hint="@string/message_here"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:inputType="textMultiLine"
+		        android:singleLine="false" />
+		    <Button 
+			    android:id="@+id/takePictureButton"
+			    android:layout_width="match_parent" 
+			    android:layout_height="wrap_content"
+			    android:text="@string/takePicture" 
+			    android:onClick="takePicture"
+			    android:layout_weight="1" />
+		    <Button 
+			    android:id="@+id/importPictureButton"
+			    android:layout_width="match_parent" 
+			    android:layout_height="wrap_content"
+			    android:text="@string/importPicture" 
+			    android:onClick="importPicture"
+			    android:layout_weight="1" />
+		</LinearLayout>
+	
+	   <ImageView
+	       		android:id="@+id/previewPicture"
+	            android:layout_width="100dp"
+	            android:layout_height="100dp"
+	            android:layout_gravity="center"
+	            android:scaleType="fitXY" />
+	   </LinearLayout>
+    
+   <RelativeLayout 
+		    android:layout_gravity="bottom"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content" >
+		<Button
+		    android:id="@+id/finishButton"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentBottom="true"
+		    android:layout_alignParentLeft="true"
+		    android:onClick="finishSetupClicked"
+		    android:text="@string/finish" />
+
+	</RelativeLayout>
+    
+
+</LinearLayout>

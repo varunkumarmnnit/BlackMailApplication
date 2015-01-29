@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.blackmail"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    
+   	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+	<!-- The following two permissions are not required to use
+     	Google Maps Android API v2, but are recommended. -->
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+	<uses-permission android:name="android.permission.CAMERA"/>
+	<!-- Required for accessing alarm manager -->>
+	<uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+	
+
+	<uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+	<uses-feature
+	    android:name="android.hardware.camera"
+	    android:required="false"/>
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDixxkpS8UCCUzDW8TmrCUOkGzlPS1dZ_U"/>
+        <!--DO NOT LEAVE THE API KEY ABOVE IN android:value IN COMMITS
+            IT IS A PRIVATE KEY, IF YOU LEAK OUR PRIVATE KEY YOU ARE THE WORST.
+            IF IT IS BLANK, REINSERT IT OR THE MAP WILL NOT WORK. -->
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".GoalMapActivity"
+            android:label="@string/goal_map_activity" />
+        <activity
+            android:name=".GoalChoicesActivity"
+            android:label="@string/goal_choices_activity" />
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/about_activity" />
+        <activity
+            android:name="com.example.blackmail.AccountSetupActivity"
+            android:label="@string/account_setup_activity">  
+
+            <intent-filter>
+                <action android:name="android.intent.action.View" />
+                <category android:name="android.intent.category.DEFAULT"/>
+    			<category android:name="android.intent.category.BROWSABLE"/>
+    			
+    			 <data
+                    android:host="t4jsample"
+                    android:scheme="oauth" />
+
+              <!--  <category android:name="android.intent.category.LAUNCHER" /> -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.blackmail.WebViewActivity"
+            android:label="@string/app_name" ></activity>
+        <activity
+            android:name="com.example.blackmail.ViewGoals"
+            android:label="@string/app_name" ></activity>
+        <activity
+            android:name="com.example.blackmail.GoalInfo"
+            android:label="@string/app_name" ></activity>
+        <activity
+            android:name=".BlackmailChoicesActivity"
+            android:label="@string/blackmail_choices_activity" ></activity>
+        <service
+            android:name=".BlackmailCheck"
+            android:exported="false"/>
+        <activity 
+            android:name="com.facebook.LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+        </activity>
+            <meta-data android:value="@string/app_id" android:name="com.facebook.sdk.ApplicationId" />
+        
+        <provider android:exported="true" android:authorities="com.facebook.app.NativeAppCallContentProvider287620624780477" android:name="com.facebook.NativeAppCallContentProvider"></provider>
+        <receiver android:name="com.example.blackmail.BlackmailAppBroadcastReceiver"></receiver>
+        
+        <!-- This is the alarm receiver -->
+        <receiver android:name=".AlarmReceiver">
+            <intent-filter >
+                <action android:name="com.example.blackmail.ALARM_TRIGGER_CHECK"/>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
