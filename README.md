@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-Blackmail
+BlackmailApplication
 =========
 
 An app that motivates you, whether you like it or not.
@@ -40,9 +40,4 @@ Finally, import all of the added project folders to the Blackmail project's buil
 
 After a Project->Clean and and Project->Build, you should be in business.
 
-
-
-=======
-# BlackMailApplication
-An Android application to motivate users to achieve their goal 
->>>>>>> 9fa9b961f2779773bd684f8a14039b3a726a3c94
+<<<<< END
