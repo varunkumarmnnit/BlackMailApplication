@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Blackmail
 =========
 
@@ -41,3 +42,7 @@ After a Project->Clean and and Project->Build, you should be in business.
 
 
 
+=======
+# BlackMailApplication
+An Android application to motivate users to achieve their goal 
+>>>>>>> 9fa9b961f2779773bd684f8a14039b3a726a3c94
